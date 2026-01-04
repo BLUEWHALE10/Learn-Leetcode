@@ -3,7 +3,7 @@ name: Sync LeetCode
 on:
   workflow_dispatch: # อนุญาตให้กดปุ่ม Run เองได้
   schedule:
-    - cron: "0 8 * * 1" # (Optional) รันอัตโนมัติทุกวันจันทร์ 8 โมงเช้า UTC
+    - cron: "0 0 * * *" # (Optional) รันอัตโนมัติทุกวันจันทร์ 8 โมงเช้า UTC
     
 permissions:
   contents: write

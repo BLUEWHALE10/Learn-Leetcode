@@ -47,3 +47,14 @@
 ```sql
 CREATE DATABASE database_name
 COLLATE THAI_CI_AS;
+
+```
+**MySQL**
+```mysq
+CREATE DATABASE database_name
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_thai_520_w2;
+```
+
+
+

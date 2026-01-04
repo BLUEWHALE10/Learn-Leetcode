@@ -1,0 +1,21 @@
+name: Sync LeetCode
+
+on:
+  workflow_dispatch: # อนุญาตให้กดปุ่ม Run เองได้
+  schedule:
+    - cron: "0 8 * * 1" # (Optional) รันอัตโนมัติทุกวันจันทร์ 8 โมงเช้า UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Sync
+      uses: joshcai/leetcode-sync@v1.7
+      with:
+        github-token: ${{ github.token }}
+        leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+        leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+        destination-folder: my-solutions # ชื่อโฟลเดอร์ที่จะเก็บโค้ดใน Repo (เปลี่ยนได้)
+        verbose: true # ให้แสดง Log ละเอียดๆ จะได้รู้ว่าติดตรงไหน
+        commit-header: '[LeetCode Sync]' # ข้อความเวลา Commit

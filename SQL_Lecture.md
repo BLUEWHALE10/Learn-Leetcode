@@ -145,7 +145,7 @@ SELECT * FROM Students WHERE Name LIKE 'S%'; -- ขึ้นต้นด้ว�
 ```
 
 ## 4. Data Manipulation (DML)
-Basic CRUD OperationsBasic CRUD Operations
+**Basic CRUD OperationsBasic CRUD Operations**
 ```sql
 -- INSERT (เพิ่มข้อมูล)
 INSERT INTO table_name (col1, col2) VALUES ('Val1', 'Val2');
@@ -199,6 +199,7 @@ SELECT COUNT(*) FROM Results;      -- นับจำนวนแถว
 ## 5. Advanced & Joins
 
 **🔑 Keys & Constraints**
+
 ตัวอย่างการสร้างตารางแบบมี Compound Key (Primary Key คู่)
 ```sql
 CREATE TABLE StudentSTPB (
@@ -227,6 +228,7 @@ INNER JOIN Orders B ON A.ID = B.CustomerID;
 ```
 
 **🔄 Self Join (การจอยตารางกับตัวเอง)**
+
 ใช้เมื่อข้อมูลมีความสัมพันธ์กันเองในตารางเดียว เช่น พนักงานกับหัวหน้า (ซึ่งหัวหน้าก็เป็นพนักงานคนหนึ่งในตารางเดียวกัน)
 
 Concept: ต้องตั้งชื่อเล่น (Alias) ให้ตารางเดียวกันเป็น 2 ชื่อ (เช่น E แทนลูกน้อง, M แทนหัวหน้า)
@@ -240,6 +242,8 @@ ON E.ManagerID = M.EmployeeID;   -- เชื่อมโยง: ManagerID ข�
 ```
 
 **📦 Group By & Having**
+
+
 ใช้จัดกลุ่มข้อมูล และกรองผลลัพธ์ หลังจาก การจัดกลุ่ม
 ```sql
 SELECT Dept, COUNT(*) 

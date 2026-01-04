@@ -43,7 +43,9 @@
 ### Create Database with Collation
 การเลือก Collation (ชุดภาษา):
 * **CI** = Case Insensitive (ตัวใหญ่/เล็ก เหมือนกัน a=A)
+* **CS** = Case Sensitive (ตัวใหญ่/เล็ก ต่างกัน)
 * **AI** = Accent Insensitive (ไม่สนวรรณยุกต์ ก่า=ก้า)
+* **AS** = Accent Sensitive (สนวรรณยุกต์)
 
 **MSSQL (SQL Server)**
 ```sql

@@ -107,43 +107,6 @@ EXEC sp_rename 'table_name.old_column', 'new_column', 'COLUMN';
 EXEC sp_rename 'old_table', 'new_table';
 ```
 
-## 3. Data Manipulation (DML)
-
-**Basic CRUD**
-```sql
--- INSERT (เพิ่มข้อมูล)
-INSERT INTO table_name (col1, col2)
-VALUES ('Value1', 'Value2');
-
--- SELECT (ดึงข้อมูล)
-SELECT * FROM table_name WHERE Condition;
-
--- UPDATE (แก้ไขข้อมูล)
-UPDATE table_name
-SET col1 = 'NewValue'
-WHERE Condition; -- **สำคัญมาก ต้องมี WHERE ไม่งั้นเปลี่ยนทั้งตาราง
-
--- DELETE (ลบข้อมูล)
-DELETE FROM table_name
-WHERE Condition; -- **สำคัญมาก ต้องมี WHERE ไม่งั้นหายหมด
-```
-
-
-**Filtering (การกรองข้อมูล)**
-```sql
--- หาค่า NULL
-SELECT * FROM table_name WHERE BirthDay IS NULL;
-
--- IN (เลือกหลายค่า)
-SELECT * FROM Students WHERE Gender IN ('M', 'F');
-
--- BETWEEN (ช่วงข้อมูล) **เพิ่มเติม
-SELECT * FROM Orders WHERE Price BETWEEN 100 AND 500;
-
--- LIKE (ค้นหาคำ) **เพิ่มเติม
-SELECT * FROM Students WHERE Name LIKE 'S%'; -- ขึ้นต้นด้วย S
-```
-
 ## 4. Data Manipulation (DML)
 **Basic CRUD OperationsBasic CRUD Operations**
 ```sql
